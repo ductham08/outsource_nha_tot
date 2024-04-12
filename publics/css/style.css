@@ -1,0 +1,223 @@
+@font-face {
+    font-family: "QuickSand";
+    src: url("../fonts/Quicksand/Quicksand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "QuickSand-Medium";
+    src: url("../fonts/Quicksand/Quicksand-Medium.ttf");
+}
+
+@font-face {
+    font-family: "QuickSand-Bold";
+    src: url("../fonts/Quicksand/Quicksand-Bold.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'QuickSand';
+}
+
+body::-webkit-scrollbar {
+    width: 0 !important;
+    display: none;
+}
+
+/* HEADER START CSS */
+.header{
+    background-color: white;
+}
+
+.header .header-desk{
+    box-shadow: 0px 0px 5px 0px gainsboro;
+}
+
+.header .header-desk .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .25rem;
+}
+
+.header p{
+    padding: 0;
+    margin: 0;
+}
+
+.header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.header ul li{
+    list-style: none;
+    margin-right: 2.5rem;
+}
+
+.header a{
+    font-family: "QuickSand-Medium";
+    text-decoration: none;
+    color: #3C3C3B;
+    font-size: 1rem;
+}
+
+.header a.active{
+    font-family: "QuickSand-Bold";
+    color: #063375;
+}
+
+.header a:hover{
+    color: #063375;
+}
+
+.header .header-menu.header-menu-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header .booking-now{
+    margin-left: 2.5rem;
+}
+
+.header .booking-now a{
+    box-shadow: 1px 2px 6px 0 #0000004d;
+    display: block;
+    width: max-content;
+    color: white;
+    background-color: #F59508;
+    padding: 0.75rem 1.5rem;
+    border-radius: 3rem;
+    font-family: "QuickSand-Medium";
+    text-decoration: none;
+    line-height: normal;
+}
+
+.header .header-mob{
+    display: none;
+}
+
+@media (max-width: 769px) {
+    .header .header-desk{
+        display: none;
+    }
+        
+    .header .header-mob{
+        display: block;
+    }
+        
+    .header .header-mob .menu-set{
+        padding: .35rem 0;
+        box-shadow: 0px 0px 5px 0px gainsboro;
+        position: relative;
+        z-index: 2;
+    }
+        
+    .header .header-mob .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+        
+    .header .booking-now{
+        margin-left: 0;
+    }
+        
+    .header .booking-now a{
+        padding: 0.45rem 1rem;
+    }
+
+    .header-mob .btn-mobile {
+        position: relative;
+        transition: 0.5s ease-in-out;
+    }
+
+    .header-mob .btn-mobile .item_menu {
+        position: relative;
+        background-color: black;
+        width: 2.25rem;
+        height: .35rem;
+        margin: 5px 0px;
+        border-radius: 15px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .header-mob .btn-mobile.active .item_menu.center {
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+    }
+
+    .header-mob .btn-mobile.active .item_menu.top {
+        transform: translate3d(0px, 10.5px, 0px) rotate(45deg);
+        transition: 0.5s ease-in-out;
+    }
+
+    .header-mob .btn-mobile.active .item_menu.bottom {
+        transform: translate3d(0px, -10.5px, 0px) rotate(-45deg);
+        transition: 0.5s ease-in-out;
+    }
+
+    .header-mob ul{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: 2rem;
+    }
+
+    .header-mob ul li{
+        margin: .5rem 12px;
+    }
+
+    .header-mob .menu-move{
+        position: fixed;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0.7;
+        height: 100vh;
+        min-height: 100vh;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+        background-color: white;
+    }
+
+    .header-mob .menu-move.active {
+        transform: translateX(0);
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+    }
+
+}
+
+/* HEADER END CSS */
+
+
+/* MAIN START CSS */
+
+.main .banner-main{
+    background-color: white;
+}
+
+.main .img-mob{
+    display: none;
+}
+
+@media (max-width: 769px) {
+    .main .img-mob{
+        display: block;
+    }
+
+    .main .img-desk{
+        display: none;
+    }
+}
+
+/* MAIN END CSS */
