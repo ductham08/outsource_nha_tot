@@ -18,6 +18,11 @@
     src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
 }
 
+@font-face {
+    font-family: "Monsterrat-Medium";
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -86,11 +91,11 @@ body::-webkit-scrollbar {
     justify-content: flex-end;
 }
 
-.header .booking-now {
+.booking-now {
     margin-left: 2.5rem;
 }
 
-.header .booking-now a {
+.booking-now a {
     box-shadow: 1px 2px 6px 0 #0000004d;
     display: block;
     width: max-content;
@@ -362,6 +367,7 @@ span.flatpickr-weekday {
     outline: none;
 }
 
+/* TAB ONE START */
 .tab-one {
     padding: 5rem 0;
     background: rgb(255, 255, 255);
@@ -375,7 +381,7 @@ span.flatpickr-weekday {
     flex-wrap: wrap;
 }
 
-.tab-one .title {
+.title {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -383,14 +389,14 @@ span.flatpickr-weekday {
     margin-bottom: 5rem;
 }
 
-.tab-one .title h1{
+.title h1{
     text-transform: uppercase;
     font-family: "Monsterrat-Bold";
     color: #063375;
     margin: 0;
 }
 
-.tab-one .title .line{
+.title .line{
     width: 8rem;
     height: .2rem;
     background-color: #F59508;
@@ -402,6 +408,7 @@ span.flatpickr-weekday {
     padding: 0;
 }
 
+/* TAB TWO START */
 .tab-two .container{
     margin: 3rem auto;
     display: flex;
@@ -426,6 +433,113 @@ span.flatpickr-weekday {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+}
+
+.tab-two .content-right{
+    position: relative;
+    padding: 0 1.5rem;
+}
+
+.tab-two .content-right .box-background{ 
+    background-color: #063375;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7rem;
+    height: 7rem;
+    z-index: -1;
+    border-radius: .2rem;
+}
+
+/* TAB THREE START */
+.tab-three{
+    position: relative;
+    margin: 7rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-three .content-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.tab-three .booking-now{
+    margin: 2rem 0;
+}
+
+.tab-three .item-slider-home{
+    background-color: white;
+    border: 1px solid #0000004d;
+    margin: 1rem 0;
+    overflow: hidden;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 6px 0 #0000004d;
+}
+
+.tab-three .item-slider-home .thumbnail{
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.tab-three .item-slider-home .desc{
+    padding: .5rem;
+}
+
+.item-slider-home .desc .title{
+    margin-bottom: .25rem;
+}
+
+.item-slider-home .desc .title a{
+    font-family: "Monsterrat-Bold";
+    text-decoration: none;
+    color: black;
+}
+
+.item-slider-home .desc .address{
+    color: #F59508;
+    font-family: "Monsterrat-Medium";
+    margin-bottom: .1rem;
+}
+
+.tab-three .swiper{
+    padding: 0 .5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+.tab-three .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    margin-bottom: -.5rem;
+}
+
+.item-slider-home .desc .price{
+    color: #2A90D9;
+    font-family: "Monsterrat-Bold";
+    margin-bottom: .5rem;
+}
+
+.item-slider-home .desc .detail-room{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-slider-home .desc .detail-room svg{
+    width: 18px;
+    height: 18px;
+    margin-right: 2px;
+}
+
+.item-slider-home .desc .detail-room .item-detail{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: .9rem;
+}
+
+.tab-three .swiper-pagination-bullet-active{
+    background-color: #F59508 !important;
 }
 
 

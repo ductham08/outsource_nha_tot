@@ -1,10 +1,12 @@
 AOS.init();
 
+// BUTTON HEADER CLICK
 $(".btn-mobile").click(function () {
     $(".btn-mobile").toggleClass("active");
     $(".menu-move").toggleClass("active");
 });
 
+// VALIDATE TIME INPUT
 flatpickr("#input-view-home", {
     dateFormat: "d/m/Y", // Định dạng ngày tháng
     defaultDate: "today",
@@ -104,4 +106,15 @@ flatpickr("#input-buy-home", {
             ]
         }
     }
+});
+
+// SWIPPER
+var swiper = new Swiper(".slider-home", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
 });
