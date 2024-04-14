@@ -13,6 +13,11 @@
     src: url("../fonts/Quicksand/Quicksand-Bold.ttf");
 }
 
+@font-face {
+    font-family: "Monsterrat-Bold";
+    src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -25,27 +30,27 @@ body::-webkit-scrollbar {
 }
 
 /* HEADER START CSS */
-.header{
+.header {
     background-color: white;
 }
 
-.header .header-desk{
+.header .header-desk {
     box-shadow: 0px 0px 5px 0px gainsboro;
 }
 
-.header .header-desk .container{
+.header .header-desk .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: .25rem;
 }
 
-.header p{
+.header p {
     padding: 0;
     margin: 0;
 }
 
-.header ul{
+.header ul {
     list-style: none;
     display: flex;
     align-items: center;
@@ -54,38 +59,38 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 
-.header ul li{
+.header ul li {
     list-style: none;
     margin-right: 2.5rem;
 }
 
-.header a{
+.header a {
     font-family: "QuickSand-Medium";
     text-decoration: none;
     color: #3C3C3B;
     font-size: 1rem;
 }
 
-.header a.active{
+.header a.active {
     font-family: "QuickSand-Bold";
     color: #063375;
 }
 
-.header a:hover{
+.header a:hover {
     color: #063375;
 }
 
-.header .header-menu.header-menu-right{
+.header .header-menu.header-menu-right {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.header .booking-now{
+.header .booking-now {
     margin-left: 2.5rem;
 }
 
-.header .booking-now a{
+.header .booking-now a {
     box-shadow: 1px 2px 6px 0 #0000004d;
     display: block;
     width: max-content;
@@ -98,37 +103,37 @@ body::-webkit-scrollbar {
     line-height: normal;
 }
 
-.header .header-mob{
+.header .header-mob {
     display: none;
 }
 
 @media (max-width: 769px) {
-    .header .header-desk{
+    .header .header-desk {
         display: none;
     }
-        
-    .header .header-mob{
+
+    .header .header-mob {
         display: block;
     }
-        
-    .header .header-mob .menu-set{
+
+    .header .header-mob .menu-set {
         padding: .35rem 0;
         box-shadow: 0px 0px 5px 0px gainsboro;
         position: relative;
         z-index: 2;
     }
-        
-    .header .header-mob .container{
+
+    .header .header-mob .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-        
-    .header .booking-now{
+
+    .header .booking-now {
         margin-left: 0;
     }
-        
-    .header .booking-now a{
+
+    .header .booking-now a {
         padding: 0.45rem 1rem;
     }
 
@@ -162,7 +167,7 @@ body::-webkit-scrollbar {
         transition: 0.5s ease-in-out;
     }
 
-    .header-mob ul{
+    .header-mob ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -170,11 +175,11 @@ body::-webkit-scrollbar {
         margin-top: 2rem;
     }
 
-    .header-mob ul li{
+    .header-mob ul li {
         margin: .5rem 12px;
     }
 
-    .header-mob .menu-move{
+    .header-mob .menu-move {
         position: fixed;
         top: 2rem;
         left: 0;
@@ -202,20 +207,234 @@ body::-webkit-scrollbar {
 
 /* MAIN START CSS */
 
-.main .banner-main{
+.main .banner-main {
     background-color: white;
 }
 
-.main .img-mob{
+.main .img-mob {
     display: none;
 }
 
+.flatpickr-day {
+    font-size: 0.8rem !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #F59508 !important;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day.selected.inRange,
+.flatpickr-day.startRange.inRange,
+.flatpickr-day.endRange.inRange,
+.flatpickr-day.selected:focus,
+.flatpickr-day.startRange:focus,
+.flatpickr-day.endRange:focus,
+.flatpickr-day.selected:hover,
+.flatpickr-day.startRange:hover,
+.flatpickr-day.endRange:hover,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.startRange.prevMonthDay,
+.flatpickr-day.endRange.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay,
+.flatpickr-day.startRange.nextMonthDay,
+.flatpickr-day.endRange.nextMonthDay {
+    background: #F59508 !important;
+    border-color: #F59508 !important;
+}
+
+.flatpickr-day.today {
+    border-color: #F59508 !important;
+}
+
+.flatpickr-current-month input.cur-year {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #F59508 !important;
+}
+
+span.flatpickr-weekday {
+    font-weight: 700 !important;
+    color: #F59508 !important;
+}
+
+.main .banner-main {
+    position: relative;
+}
+
+.main .banner-main .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.banner-main .content .content-top {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 7rem auto;
+}
+
+.banner-main .content .content-top h1 {
+    text-transform: uppercase;
+    font-family: "Monsterrat-Bold";
+    color: #3FC2BF;
+}
+
+.banner-main .content .select-datetime {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 4.5rem auto;
+    background-color: white;
+    border-radius: .2rem;
+}
+
+.banner-main .content .select-datetime .item-select {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .5rem 2rem;
+}
+
+.select-datetime .item-select svg {
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-right: .5rem;
+}
+
+.select-datetime .item-select p {
+    margin: 0;
+}
+
+.select-datetime .item-select p label {
+    font-size: .9rem;
+    color: #525252;
+}
+
+.select-datetime .item-select input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.select-datetime .item-select select {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+}
+
+.search {
+    box-shadow: 1px 2px 6px 0 #0000004d;
+    display: block;
+    width: max-content;
+    color: white;
+    background-color: #F59508;
+    font-family: "QuickSand-Medium";
+    text-decoration: none;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button {
+    margin: 0;
+    font-family: "QuickSand-Bold";
+    color: white;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.tab-one {
+    padding: 5rem 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 248, 255, 1) 24%, rgba(223, 248, 255, 1) 84%, rgba(255, 255, 255, 1) 100%);
+}
+
+.tab-one .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tab-one .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 5rem;
+}
+
+.tab-one .title h1{
+    text-transform: uppercase;
+    font-family: "Monsterrat-Bold";
+    color: #063375;
+    margin: 0;
+}
+
+.tab-one .title .line{
+    width: 8rem;
+    height: .2rem;
+    background-color: #F59508;
+}
+
+.tab-one .desc p{
+    font-family: "QuickSand-Medium";
+    margin: .3rem 0;
+    padding: 0;
+}
+
+.tab-two .container{
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-two .content-left .desc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3rem;
+    margin: 3rem 0;
+}
+
+.tab-two .content-left .desc .item-desc b{
+    font-size: 2.5rem;
+}
+
+.tab-two .content-left .desc .item-desc{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
 @media (max-width: 769px) {
-    .main .img-mob{
+    .main .img-mob {
         display: block;
     }
 
-    .main .img-desk{
+    .main .img-desk {
         display: none;
     }
 }
