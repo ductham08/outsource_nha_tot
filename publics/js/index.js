@@ -108,13 +108,60 @@ flatpickr("#input-buy-home", {
     }
 });
 
-// SWIPPER
+// SWIPPER TAB THREE
 var swiper = new Swiper(".slider-home", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 20,
     loop: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        "@0.75": {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        "@1.50": {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+    },
+});
+
+// SWIPPER TAB FIVE
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        "@0.00": {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        "@0.75": {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        "@1.00": {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
+        "@1.50": {
+            slidesPerView: 3,
+            spaceBetween: 30,
+        },
     },
 });

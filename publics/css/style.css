@@ -23,15 +23,30 @@
     src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
 }
 
+@font-face {
+    font-family: "Monsterrat-SemiBold";
+    src: url("../fonts/Montserrat/Montserrat-SemiBold.ttf");
+}
+
 * {
     padding: 0;
     margin: 0;
     font-family: 'QuickSand';
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
 body::-webkit-scrollbar {
     width: 0 !important;
     display: none;
+}
+
+.main{
+    overflow: hidden;
 }
 
 /* HEADER START CSS */
@@ -93,6 +108,12 @@ body::-webkit-scrollbar {
 
 .booking-now {
     margin-left: 2.5rem;
+    transition: .3s ease-in-out;
+}
+
+.booking-now:hover {
+    transition: .3s ease-in-out;
+    transform: scale(1.05);
 }
 
 .booking-now a {
@@ -271,12 +292,7 @@ span.flatpickr-weekday {
     position: relative;
 }
 
-.main .banner-main .content .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.main .banner-main .content {
     position: absolute;
     top: 0;
     right: 0;
@@ -284,12 +300,21 @@ span.flatpickr-weekday {
     bottom: 0;
 }
 
+.main .banner-main .content .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .banner-main .content .content-top {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    margin: 7rem auto;
+    margin: 5.5rem auto;
 }
 
 .banner-main .content .content-top h1 {
@@ -374,7 +399,7 @@ span.flatpickr-weekday {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 248, 255, 1) 24%, rgba(223, 248, 255, 1) 84%, rgba(255, 255, 255, 1) 100%);
 }
 
-.tab-one .container{
+.tab-one .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -389,34 +414,35 @@ span.flatpickr-weekday {
     margin-bottom: 5rem;
 }
 
-.title h1{
+.title h1 {
     text-transform: uppercase;
     font-family: "Monsterrat-Bold";
     color: #063375;
     margin: 0;
 }
 
-.title .line{
+.title .line {
     width: 8rem;
     height: .2rem;
     background-color: #F59508;
 }
 
-.tab-one .desc p{
+.tab-one .desc p {
     font-family: "QuickSand-Medium";
     margin: .3rem 0;
     padding: 0;
 }
 
 /* TAB TWO START */
-.tab-two .container{
+.tab-two .container {
     margin: 3rem auto;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.tab-two .content-left .desc{
+.tab-two .content-left .desc {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -424,23 +450,23 @@ span.flatpickr-weekday {
     margin: 3rem 0;
 }
 
-.tab-two .content-left .desc .item-desc b{
+.tab-two .content-left .desc .item-desc b {
     font-size: 2.5rem;
 }
 
-.tab-two .content-left .desc .item-desc{
+.tab-two .content-left .desc .item-desc {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
 
-.tab-two .content-right{
+.tab-two .content-right {
     position: relative;
     padding: 0 1.5rem;
 }
 
-.tab-two .content-right .box-background{ 
+.tab-two .content-right .box-background {
     background-color: #063375;
     position: absolute;
     top: 0;
@@ -452,25 +478,35 @@ span.flatpickr-weekday {
 }
 
 /* TAB THREE START */
-.tab-three{
+.tab-three {
     position: relative;
-    margin: 7rem 0;
+    margin: 7rem auto;
+    padding: 5rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.tab-three .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* 
 .tab-three .content-right{
     position: absolute;
     right: 0;
     top: 0;
 }
+ */
 
-.tab-three .booking-now{
+.tab-three .booking-now {
     margin: 2rem 0;
 }
 
-.tab-three .item-slider-home{
+.tab-three .item-slider-home {
     background-color: white;
     border: 1px solid #0000004d;
     margin: 1rem 0;
@@ -479,69 +515,319 @@ span.flatpickr-weekday {
     box-shadow: 1px 2px 6px 0 #0000004d;
 }
 
-.tab-three .item-slider-home .thumbnail{
-    border-radius: .5rem;
+.tab-three .item-slider-home .thumbnail {
+    border-radius: .5rem .5rem 0 0;
     overflow: hidden;
 }
 
-.tab-three .item-slider-home .desc{
+.tab-three .item-slider-home .desc {
     padding: .5rem;
 }
 
-.item-slider-home .desc .title{
+.item-slider-home .desc .title {
     margin-bottom: .25rem;
 }
 
-.item-slider-home .desc .title a{
+.item-slider-home .desc .title a {
     font-family: "Monsterrat-Bold";
     text-decoration: none;
     color: black;
 }
 
-.item-slider-home .desc .address{
+.item-slider-home .desc .address {
     color: #F59508;
     font-family: "Monsterrat-Medium";
     margin-bottom: .1rem;
 }
 
-.tab-three .swiper{
+.tab-three .swiper {
     padding: 0 .5rem !important;
     padding-bottom: 1.5rem !important;
 }
 
-.tab-three .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.tab-three .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
     margin-bottom: -.5rem;
 }
 
-.item-slider-home .desc .price{
+.item-slider-home .desc .price {
     color: #2A90D9;
     font-family: "Monsterrat-Bold";
     margin-bottom: .5rem;
 }
 
-.item-slider-home .desc .detail-room{
+.item-slider-home .desc .detail-room {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.item-slider-home .desc .detail-room svg{
+.item-slider-home .desc .detail-room svg {
     width: 18px;
     height: 18px;
     margin-right: 2px;
 }
 
-.item-slider-home .desc .detail-room .item-detail{
+.item-slider-home .desc .detail-room .item-detail {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: .9rem;
+    font-size: .75rem;
 }
 
-.tab-three .swiper-pagination-bullet-active{
+.tab-three .swiper-pagination-bullet-active {
     background-color: #F59508 !important;
 }
 
+/* TAB FOUR START */
+.tab-four .title {
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tab-four .title p {
+    font-family: "Monsterrat-Medium";
+}
+
+.tab-four .title img {
+    width: 70%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.tab-four .content .content-left h2 {
+    font-family: "Monsterrat-SemiBold";
+    color: #545454;
+}
+
+.tab-four .booking-now {
+    margin-left: 0;
+    margin-top: 3rem;
+}
+
+.tab-four .content-left {
+    padding-right: 2rem;
+}
+
+.tab-four .content-right {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.tab-four .content {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tab-four .content-right .item-content svg {
+    width: 35px !important;
+    height: 35px !important;
+}
+
+.tab-four .content-right .item-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 23%;
+    min-height: 7.5rem;
+    margin: 1%;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #0000004d;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 6px 0 #0000004d;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.tab-four .content-right .item-content:hover {
+    transition: .3s ease-in-out;
+    transform: scale(1.03);
+}
+
+.tab-four .content-right .item-content p {
+    color: #737373;
+    text-align: center;
+    font-family: "Monsterrat-Medium";
+    margin: 0;
+}
+
+/* TAB FIVE START */
+.tab-five {
+    margin-top: 7rem;
+    padding-bottom: 2rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 55%, rgba(255, 243, 231, 1) 100%);
+}
+
+.tab-five .title {
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.tab-five .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab-five .content .item-content {
+    width: 30%;
+    text-align: center;
+}
+
+.tab-five .content .item-content .thumnail {
+    border-radius: .6rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.tab-five .content .item-content p {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* BANNER FOOTER START */
+.banner-footer {
+    position: relative;
+}
+
+.banner-footer .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-footer .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-footer .content h2{
+    font-family: "Monsterrat-Bold";
+    color: white;
+    text-align: center;
+}
+
+.banner-footer .content .booking-now{
+    margin: 2rem 0;
+}
+
+.footer{
+    padding-top: 5rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 55%, rgba(255, 243, 231, 1) 100%);
+}
+
+.footer .item-footer .top{
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.footer .item-footer .title{
+    margin: 0;
+}
+
+.footer .item-footer .title h6{
+    color: #3FC2BF;
+    margin-left: .5rem;
+    text-transform: uppercase;
+    font-family: "Monsterrat-Bold";
+}
+
+.footer svg{
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.footer p{
+    margin: 0;
+    margin-left: .2rem;
+}
+
+.footer .container{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .item-content{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: .2rem 0;
+}
+
+.footer .item-content .left{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer .item-content .left p{
+    font-family: "QuickSand-Medium";
+}
+
+.footer .item-footer .title h3{
+    color: #063375;
+    font-family: "Monsterrat-Bold";
+    margin-bottom: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer .content a{
+    color: black;
+    text-decoration: none;
+    margin: .3rem 0;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .content a:hover{
+    font-family: "QuickSand-Medium";
+    color: #063375;
+    transition: 0.3s ease-in-out;
+}
+
+.footer .coppy-r{
+    text-align: center;
+    color: #545454;
+    margin: 2rem auto 1rem auto;
+    font-size: .8rem;
+}
+
+.tab-five .swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    margin-bottom: -.5rem;
+}
+
+.tab-five .swiper-pagination-bullet-active {
+    background-color: #F59508 !important;
+}
+
+.tab-five .swiper {
+    padding: 0 .5rem !important;
+    padding-bottom: 1.5rem !important;
+}
 
 @media (max-width: 769px) {
     .main .img-mob {
@@ -550,6 +836,94 @@ span.flatpickr-weekday {
 
     .main .img-desk {
         display: none;
+    }
+
+    .banner-main .content .content-top{
+        align-items: center;
+    }
+
+    .select-datetime .item-select svg{
+        width: 30px;
+        height: 30px;
+    }
+
+    .select-datetime .item-select input{
+        font-size: .9rem;
+        line-height: .9rem;
+    }
+
+    .banner-main .content .select-datetime .item-select{
+        padding: .1rem 2rem;
+    }
+
+    .select-datetime .item-select select{
+        font-size: .9rem;
+    }
+
+    .search button{
+        font-size: .9rem;
+    }
+
+    .tab-two .content-left .logo{
+        margin: 0 auto;
+    }
+
+    .tab-two .content-left .desc{
+        padding: 0;
+    }
+
+    .tab-two .content-left p{
+        text-align: center;
+    }
+
+    .tab-two .content-left .desc .item-desc b{
+        font-size: 2rem;
+    }
+
+    .tab-four .title h1{
+        text-align: center;
+    }
+
+    .tab-four .content-right{
+        margin-top: 2rem;
+        justify-content: space-between;
+    }
+
+    .tab-four .content-right .item-content{
+        width: 32%;
+        margin: 1% 0;
+    }
+
+    .tab-four .content-left{
+        padding: 0;
+    }
+
+    .tab-five .title{
+        margin-top: 2rem;
+    }
+
+    .tab-five .title h1{
+        text-align: center;
+    }
+
+    .tab-five .content{
+        flex-wrap: wrap;
+    }
+
+    .tab-five .content .item-content{
+        width: 100%;
+    }
+
+    .tab-three{
+        margin: 5rem auto;
+    }
+
+    .title{
+        margin-bottom: 3rem;
+    }
+
+    .tab-four .content-right .item-content p{
+        font-size: .8rem;
     }
 }
 
