@@ -112,6 +112,10 @@ flatpickr("#input-buy-home", {
 var swiper = new Swiper(".slider-home", {
     slidesPerView: 3,
     spaceBetween: 20,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
     loop: true,
     pagination: {
         el: ".swiper-pagination",
@@ -142,6 +146,10 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 10,
     loop: true,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+    },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
