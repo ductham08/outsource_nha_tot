@@ -596,7 +596,6 @@ span.flatpickr-weekday {
 }
 
 .tab-four .title img {
-    width: 70%;
     margin: auto;
     display: block;
     text-align: center;
@@ -815,6 +814,10 @@ span.flatpickr-weekday {
     color: #545454;
     margin: 2rem auto 1rem auto;
     font-size: .8rem;
+}
+
+.footer .logo{
+    margin-bottom: 10px;
 }
 
 .tab-five .swiper-horizontal>.swiper-pagination-bullets,
