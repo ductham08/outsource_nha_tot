@@ -24,6 +24,15 @@
     font-family: 'Monsterrat-Regular';
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
@@ -46,6 +55,7 @@ body::-webkit-scrollbar {
 
 .header .header-desk {
     box-shadow: 0px 0px 5px 0px gainsboro;
+    padding: .5rem 0;
 }
 
 .header .header-desk .container {
@@ -240,7 +250,7 @@ body::-webkit-scrollbar {
 }
 
 .flatpickr-current-month .flatpickr-monthDropdown-months {
-    font-size: 1rem !important;
+    font-size: .9rem !important;
     font-weight: 700 !important;
     color: #F59508 !important;
 }
@@ -272,13 +282,11 @@ body::-webkit-scrollbar {
 }
 
 .flatpickr-current-month input.cur-year {
-    font-size: 1rem !important;
-    font-weight: 700 !important;
+    font-size: .9rem !important;
     color: #F59508 !important;
 }
 
 span.flatpickr-weekday {
-    font-weight: 700 !important;
     color: #F59508 !important;
 }
 
@@ -317,7 +325,7 @@ span.flatpickr-weekday {
     color: #3FC2BF;
 }
 
-.banner-main .content .select-datetime {
+.select-datetime {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
@@ -328,7 +336,7 @@ span.flatpickr-weekday {
     box-shadow: 1px 2px 6px 0 #0000004d;
 }
 
-.banner-main .content .select-datetime .item-select {
+.select-datetime .item-select {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -1504,6 +1512,140 @@ span.flatpickr-weekday {
 
     .contact-page .main-form .item-content{
         justify-content: center;
+    }
+
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+/* DETAIL ROOM PAGE */
+
+.detail-page .main-page{
+    margin: 5rem auto;
+}
+
+.detail-page .images {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.detail-page .images .content-left{
+    padding: 1px;
+    border: 1px solid white;
+}
+
+.detail-page .images .content-right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.detail-page .images .content-right .item-images-right{
+    border: 1px solid white;
+    width: 50%;
+}
+
+.detail-page .detail-room{
+    margin: 3rem auto;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detail-page .detail-room .title-room {
+    font-family: "Monsterrat-Bold";
+    color: #063375;
+    font-size: 2rem;
+    text-decoration: none;
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 35px;
+}
+
+.detail-page .detail-room .title-desc{
+    text-transform: uppercase;
+    color: #3C3C3B;
+    font-family: "Monsterrat-SemiBold";
+    margin: 15px 0 10px 0;
+    padding-bottom: 7px;
+}
+
+.detail-page .booking-form{
+    padding-left: 1.5rem;
+}
+
+.detail-page .booking-form label{
+    font-size: .9rem;
+}
+
+.detail-page .booking-form input{
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #3C3C3B80;
+    outline: none;
+    width: 100%;
+    font-size: .9rem;
+    padding: 3px 10px;
+    outline: none !important;
+    margin: 0 0 10px 0;
+}
+
+.detail-page .booking-form button {
+    background-color: #F59508;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 7px 25px;
+    border-radius: .2rem;
+    font-family: "Monsterrat-Medium";
+    font-size: .9rem;
+    width: 100%;
+}
+
+.detail-page .list-desc .item-desc{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.detail-page .list-desc .item-desc .left{
+    width: 18%;
+    color: #3C3C3B80;
+}
+
+.detail-page .list-desc .item-desc p{
+    margin: 0;
+    font-size: .9rem;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .detail-page .detail-room .item-detail{
+        width: 33%;
+    }
+}
+
+@media (max-width: 769px) {
+    .detail-page .detail-room .item-detail{
+        width: 50%;
+    }
+        
+    .detail-page .booking-form{
+        padding-left: 0;
+        margin-top: 2rem;
     }
 
 }
