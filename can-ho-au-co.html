@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./publics/css/flatpickr.min.css">
     <link rel="stylesheet" href="./publics/css/aos.min.css">
     <link rel="stylesheet" href="./publics/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./publics/css/fancybox.min.css">
     <link rel="stylesheet" href="./publics/css/toastr.min.css">
 
     <!-- SCRIPT -->
@@ -20,10 +21,11 @@
     <script src="./publics/js/aos.min.js"></script>
     <script src="./publics/js/swiper-bundle.min.js"></script>
     
+
 </head>
 
 <body>
-    <div class="main contact-page">
+    <div class="main detail-page">
         <!-- HEADDER START -->
         <header class="header">
             <div class="header-desk">
@@ -37,10 +39,10 @@
                                 <a href="./news.html">Tin tức</a>
                             </li>
                             <li>
-                                <a href="./phong-tro.html">Giỏ hàng</a>
+                                <a class="active" href="./phong-tro.html">Giỏ hàng</a>
                             </li>
                             <li>
-                                <a class="active" href="./contact.html">Liên hệ</a>
+                                <a href="./contact.html">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
@@ -81,10 +83,10 @@
                             <a href="./news.html">Tin tức</a>
                         </li>
                         <li>
-                            <a href="./phong-tro.html">Giỏ hàng</a>
+                            <a class="active" href="./phong-tro.html">Giỏ hàng</a>
                         </li>
                         <li>
-                            <a class="active" href="./contact.html">Liên hệ</a>
+                            <a href="./contact.html">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
@@ -93,66 +95,171 @@
         <!-- HEADDER END -->
 
         <!-- MAIN START -->
-        <div class="main-page">
-            <div class="banner">
-                <div class="background-banner">
-                    <img src="./publics/images/background-banner-contact.png" class="img-desk" width="100%" alt="">
-                    <img src="./publics/images/background-banner-contact-mob.png" class="img-mob " width="100%" alt="">
+        <div class="main-page container">
+            <!-- IMAGES START -->
+            <div class="images">
+                <div class="content-left col-md-6 col-12">
+                    <div class="item-images-left">
+                        <a class="fancybox" data-fancybox href="./publics/images/au-co-01.png">
+                            <img src="./publics/images/au-co-01.png" width="100%" alt="">
+                        </a>
+                    </div>
                 </div>
-                <div class="content-banner">
-                    <div class="container">
-                        <h2>Nhà tốt - Nơi khởi đầu hành trình</h2>
-                        <div class="form-email col-md-5 col-10" >
-                            <input type="email" placeholder="Nhận thông báo khi có tin tức mới">
-                            <button>Gửi</button>
+                <div class="content-right col-md-6 col-12">
+                    <div class="item-images-right">
+                        <a class="fancybox" data-fancybox href="./publics/images/au-co-02.png">
+                            <img src="./publics/images/au-co-02.png" width="100%" alt="">
+                        </a>
+                    </div>
+                    <div class="item-images-right">
+                        <a class="fancybox" data-fancybox href="./publics/images/au-co-03.png">
+                            <img src="./publics/images/au-co-03.png" width="100%" alt="">
+                        </a>
+                    </div>
+                    <div class="item-images-right">
+                        <a class="fancybox" data-fancybox href="./publics/images/au-co-04.png">
+                            <img src="./publics/images/au-co-04.png" width="100%" alt="">
+                        </a>
+                    </div>
+                    <div class="item-images-right">
+                        <a class="fancybox" data-fancybox href="./publics/images/au-co-05.png">
+                            <img src="./publics/images/au-co-05.png" width="100%" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- IMAGES END -->
+
+            <!-- DETAIL ROOM START -->
+            <div class="detail-room col-12">
+                <div class="content-left col-md-8 col-12">
+                    <h1 class="title-room">Căn hộ đầy đủ nội thất</h1>
+
+                    <!--  -->
+                    <div class="title-desc">CHI TIẾT</div>
+
+                    <div class="list-desc">
+                        <div class="item-desc">
+                            <p class="left">Địa chỉ</p>
+                            <p id="location" class="right bold">563 Âu Cơ, phường 10, Quận Tân Bình, TP.HCM</p>
                         </div>
+                        <div class="item-desc">
+                            <p class="left">Diện tích</p>
+                            <p class="right bold">30m² - 40m²</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Mức giá</p>
+                            <p class="right bold">3.900.000đ - 4.900.000đ</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Số lượng người</p>
+                            <p class="right">02 - 04 người</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Tủ quần áo</p>
+                            <p class="right">Có</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Tủ lạnh</p>
+                            <p class="right">Có</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Điều hòa</p>
+                            <p class="right">Có</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Bếp</p>
+                            <p class="right">Có</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Nuôi thú cưng</p>
+                            <p class="right">Được phép nuôi</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Máy giặt</p>
+                            <p class="right">Có</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Bàn ghế</p>
+                            <p class="right">01 bộ</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Giường ngủ</p>
+                            <p class="right">giường đôi</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Bảo vệ</p>
+                            <p class="right">24/7</p>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="title-desc">Mô tả</div>
+                    <div class="text-desc">
+                        <p>Phòng  kế hiện đại với tone màu trắng kết hợp với màu xanh da trời nhẹ nhàng.
+                            <br>Nhà vệ sinh riêng biệt, có khu vực để xe và phơi đồ rộng rãi, thoáng mát.
+                            <br>Trong hẻm lớn 2 ô tô tránh nhau nên thuận tiện di chuyển, đón xe taxi.
+                            Trong khu dân trí cao, không chung chủ, giờ giấc tự do và khoá an ninh, bảo mật.</p>
+                    </div>
+
+                </div>
+                <!--  -->
+                <div class="booking-form col-md-4 col-12">
+                    <div class="title-desc">Hẹn lịch xem phòng</div>
+                    <div class="form-data col-12">
+                        <form action="">
+                            <div class="item-form col-12">
+                                <label for="user-name">Họ và tên:</label>
+                                <input required type="text" placeholder="Nguyen Van A" id="user-name">
+                            </div>
+                            <div class="item-form col-12">
+                                <label for="phone-number">Số điện thoại:</label>
+                                <input required type="text" placeholder="0123 456 789" id="phone-number">
+                            </div>
+                            <div class="item-form col-12">
+                                <label for="phone-number">Bạn đang tìm phòng ở quận nào:</label>
+                                <select name="" id="address">
+                                    <option disabled selected>Chọn địa chỉ</option>
+                                    <option value="Quận 1">Quận 1</option>
+                                    <option value="Quận 3">Quận 3</option>
+                                    <option value="Quận 4">Quận 4</option>
+                                    <option value="Quận 5">Quận 5</option>
+                                    <option value="Quận 6">Quận 6</option>
+                                    <option value="Quận 7">Quận 7</option>
+                                    <option value="Quận 8">Quận 8</option>
+                                    <option value="Quận 9">Quận 9</option>
+                                    <option value="Quận 10">Quận 10</option>
+                                    <option value="Quận 11">Quận 11</option>
+                                    <option value="Quận 12">Quận 12</option>
+                                    <option value="Quận Bình Tân">Quận Bình Tân</option>
+                                    <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                                    <option value="Quận Gò Vấp">Quận Gò Vấp</option>
+                                    <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+                                    <option value="Quận Tân Bình">Quận Tân Bình</option>
+                                    <option value="Quận Tân Phú">Quận Tân Phú</option>
+                                    <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
+                                    <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+                                    <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+                                    <option value="Huyện Củ Chi">Huyện Củ Chi</option>
+                                    <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
+                                </select>
+                            </div>
+                            <div class="item-form col-12">
+                                <label for="input-buy-home">Ngày hẹn:</label>
+                                <input required type="text" id="input-buy-home" placeholder="Chọn ngày tháng"></input>
+                            </div>
+                            <div class="item-form col-12">
+                                <button id="btnSubmit">Gửi</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
-            <div class="main-form">
-                <div class="content-main container">
-                    <div class="content-left col-md-5 col-12">
-                        <div class="logo col-md-3 col-4">
-                            <img src="./publics/images/logo.png" width="100%" alt="">
-                        </div>
-                        <div class="detail-content">
-                            <p>Tự tin là đơn vị cho thuê phòng trọ, căn hộ dịch vụ, nhà phố uy tín nhất tại Thành phố Hồ Chí Minh.</p>
-                            <p>Với kim chỉ nam lấy khách hàng làm trọng tâm, Nhà Tốt TP.HCM luôn nổi bật với mức giá cạnh tranh, tình trạng an ninh tuyệt đối, luôn đầy đủ nội thất hiện đại.</p>
-                            <p>Điện thoại: 012 963 859 5661</p>
-                            <p>Email: contact@nhatottphcm.com</p>
-                        </div>
-                    </div>
-                    <div class="content-right col-md-6 col-12">
-                        <h4>Gửi tin nhắn cho Nhà Tốt</h4>
-                        <div class="form-data col-md-8 col-12">
-                            <div class="item-form col-12">
-                                <label for="name">Họ và tên</label>
-                                <input type="text" id="name">
-                            </div>
-                            <div class="item-form col-md-6 col-12">
-                                <label for="email">Email</label>
-                                <input type="email" id="email">
-                            </div>
-                            <div class="item-form col-md-5 col-12">
-                                <label for="phone">Số điện thoại</label>
-                                <input type="text" id="phone">
-                            </div>
-                            <div class="item-form col-12">
-                                <label for="text">Nội dung</label>
-                                <textarea name="" id="text" rows="5"></textarea>
-                            </div>
-                            <div class="item-form col-12">
-                                <button>Gửi</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="map-contact">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5680380375156!2d106.68310527599799!3d10.767736189380553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f1860868d1d%3A0x5788e5c550af14a6!2zMTkxIMSQLiBD4buRbmcgUXXhu7NuaCwgUGjGsOG7nW5nIE5ndXnhu4VuIEPGsCBUcmluaCwgUXXhuq1uIDEsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1713282386065!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            <!-- DETAIL ROOM END -->
+        </div>
+        <div id="map-contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.37825335355!2d106.64016367599824!3d10.782314189366813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752eb06c23060b%3A0x73b4409932b2a90b!2zNTYzIMSQLiDDgnUgQ8ahLCBQaMO6IFRydW5nLCBUw6JuIFBow7osIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmlldG5hbQ!5e0!3m2!1sen!2s!4v1713870213763!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- MAIN END -->
 
@@ -161,7 +268,7 @@
             <div class="container">
                 <div class="item-footer col-md-4 col-12">
                     <div class="top">
-                        <div class="logo col-md-3 col-6">
+                        <div class="logo col-md-3 col-5">
                             <img src="./publics/images/logo.png" width="100%" alt="">
                         </div>
                         <div class="title col-md-9 col-12">
@@ -270,6 +377,10 @@
     <script src="./publics/js/bootstrap.min.js"></script>
     <script src="./publics/js/jquery-3.7.1.min.js"></script>
     <script src="./publics/js/index.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./publics/js/fancybox.min.js"></script>
+    <script src="./publics/js/toastr.min.js"></script>
+    <script src="./publics/js/sendEmail.js"></script>
 
 </body>
 

@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="./publics/css/aos.min.css">
     <link rel="stylesheet" href="./publics/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./publics/css/fancybox.min.css">
+    <link rel="stylesheet" href="./publics/css/toastr.min.css">
 
     <!-- SCRIPT -->
     <script src="./publics/js/flatpickr.js"></script>
     <script src="./publics/js/aos.min.js"></script>
     <script src="./publics/js/swiper-bundle.min.js"></script>
+    
 
 </head>
 
@@ -37,7 +39,7 @@
                                 <a href="./news.html">Tin tức</a>
                             </li>
                             <li>
-                                <a class="active" href="./room.html">Giỏ hàng</a>
+                                <a class="active" href="./phong-tro.html">Giỏ hàng</a>
                             </li>
                             <li>
                                 <a href="./contact.html">Liên hệ</a>
@@ -52,7 +54,7 @@
                     <div class="header-menu header-menu-right col-5">
                         <p>Hotline : 028 64654 146</p>
                         <div class="booking-now">
-                            <a href="#">Thuê phòng ngay</a>
+                            <a href="./phong-tro.html">Thuê phòng ngay</a>
                         </div>
                     </div>
                 </div>
@@ -68,7 +70,7 @@
                         </div>
 
                         <div class="booking-now">
-                            <a href="#">Thuê phòng ngay</a>
+                            <a href="./phong-tro.html">Thuê phòng ngay</a>
                         </div>
                     </div>
                 </div>
@@ -81,7 +83,7 @@
                             <a href="./news.html">Tin tức</a>
                         </li>
                         <li>
-                            <a class="active" href="./room.html">Giỏ hàng</a>
+                            <a class="active" href="./phong-tro.html">Giỏ hàng</a>
                         </li>
                         <li>
                             <a href="./contact.html">Liên hệ</a>
@@ -98,30 +100,30 @@
             <div class="images">
                 <div class="content-left col-md-6 col-12">
                     <div class="item-images-left">
-                        <a class="fancybox" data-fancybox href="./publics/images/images-left.png">
-                            <img src="./publics/images/images-left.png" width="100%" alt="">
+                        <a class="fancybox" data-fancybox href="./publics/images/cach-mang-thang-8-01.png">
+                            <img src="./publics/images/cach-mang-thang-8-01.png" width="100%" alt="">
                         </a>
                     </div>
                 </div>
                 <div class="content-right col-md-6 col-12">
                     <div class="item-images-right">
-                        <a class="fancybox" data-fancybox href="./publics/images/images-right-01.png">
-                            <img src="./publics/images/images-right-01.png" width="100%" alt="">
+                        <a class="fancybox" data-fancybox href="./publics/images/cach-mang-thang-8-02.png">
+                            <img src="./publics/images/cach-mang-thang-8-02.png" width="100%" alt="">
                         </a>
                     </div>
                     <div class="item-images-right">
-                        <a class="fancybox" data-fancybox href="./publics/images/images-right-02.png">
-                            <img src="./publics/images/images-right-02.png" width="100%" alt="">
+                        <a class="fancybox" data-fancybox href="./publics/images/cach-mang-thang-8-03.png">
+                            <img src="./publics/images/cach-mang-thang-8-03.png" width="100%" alt="">
                         </a>
                     </div>
                     <div class="item-images-right">
-                        <a class="fancybox" data-fancybox href="./publics/images/images-right-03.png">
-                            <img src="./publics/images/images-right-03.png" width="100%" alt="">
+                        <a class="fancybox" data-fancybox href="./publics/images/cach-mang-thang-8-04.png">
+                            <img src="./publics/images/cach-mang-thang-8-04.png" width="100%" alt="">
                         </a>
                     </div>
                     <div class="item-images-right">
-                        <a class="fancybox" data-fancybox href="./publics/images/images-right-04.png">
-                            <img src="./publics/images/images-right-04.png" width="100%" alt="">
+                        <a class="fancybox" data-fancybox href="./publics/images/cach-mang-thang-8-05.png">
+                            <img src="./publics/images/cach-mang-thang-8-05.png" width="100%" alt="">
                         </a>
                     </div>
                 </div>
@@ -139,11 +141,19 @@
                     <div class="list-desc">
                         <div class="item-desc">
                             <p class="left">Địa chỉ</p>
-                            <p class="right">K300, Q.Tân Bình, TP HCM</p>
+                            <p id="location" class="right bold">177 đường Cách Mạng Tháng 8, Phường 5, Quận 3, TP.HCM</p>
                         </div>
                         <div class="item-desc">
                             <p class="left">Diện tích</p>
-                            <p class="right">25m2</p>
+                            <p class="right bold">30m² - 50m²</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Mức giá</p>
+                            <p class="right bold">5.000.000đ - 6.500.000đ</p>
+                        </div>
+                        <div class="item-desc">
+                            <p class="left">Số lượng người</p>
+                            <p class="right">02 - 04 người</p>
                         </div>
                         <div class="item-desc">
                             <p class="left">Tủ quần áo</p>
@@ -186,7 +196,12 @@
                     <!--  -->
                     <div class="title-desc">Mô tả</div>
                     <div class="text-desc">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p>
+                            Phòng full nội thất hiện đại, rộng rãi thoáng mát và tách biệt giữa trung tâm thành phố. <br> 
+                            Khu vực sát quận 1, Quận 3 nên di chuyển đi đâu cũng rất gần. <br>
+                            Nội thất được trang bị đầy đủ, khách thuê và khu vực xung quanh đều dân trí cao, yên tĩnh, an toàn. <br>
+                            Miễn phí để 2 xe máy/phòng
+                        </p>
                     </div>
 
                 </div>
@@ -194,26 +209,61 @@
                 <div class="booking-form col-md-4 col-12">
                     <div class="title-desc">Hẹn lịch xem phòng</div>
                     <div class="form-data col-12">
-                        <div class="item-form col-12">
-                            <label for="user-name">Họ và tên:</label>
-                            <input type="text" placeholder="Nguyen Van A" id="user-name">
-                        </div>
-                        <div class="item-form col-12">
-                            <label for="phone-number">Số điện thoại:</label>
-                            <input type="text" placeholder="0123 456 789" id="phone-number">
-                        </div>
-                        <div class="item-form col-12">
-                            <label for="input-buy-home">Ngày hẹn:</label>
-                            <input type="text" id="input-buy-home" placeholder="Chọn ngày tháng"></input>
-                        </div>
-                        <div class="item-form col-12">
-                            <button id="btnSubmit">Gửi</button>
-                        </div>
+                        <form action="">
+                            <div class="item-form col-12">
+                                <label for="user-name">Họ và tên:</label>
+                                <input required type="text" placeholder="Nguyen Van A" id="user-name">
+                            </div>
+                            <div class="item-form col-12">
+                                <label for="phone-number">Số điện thoại:</label>
+                                <input required type="text" placeholder="0123 456 789" id="phone-number">
+                            </div>
+                            <div class="item-form col-12">
+                                <label for="phone-number">Bạn đang tìm phòng ở quận nào:</label>
+                                <select name="" id="address">
+                                    <option disabled selected>Chọn địa chỉ</option>
+                                    <option value="Quận 1">Quận 1</option>
+                                    <option value="Quận 3">Quận 3</option>
+                                    <option value="Quận 4">Quận 4</option>
+                                    <option value="Quận 5">Quận 5</option>
+                                    <option value="Quận 6">Quận 6</option>
+                                    <option value="Quận 7">Quận 7</option>
+                                    <option value="Quận 8">Quận 8</option>
+                                    <option value="Quận 9">Quận 9</option>
+                                    <option value="Quận 10">Quận 10</option>
+                                    <option value="Quận 11">Quận 11</option>
+                                    <option value="Quận 12">Quận 12</option>
+                                    <option value="Quận Bình Tân">Quận Bình Tân</option>
+                                    <option value="Quận Bình Thạnh">Quận Bình Thạnh</option>
+                                    <option value="Quận Gò Vấp">Quận Gò Vấp</option>
+                                    <option value="Quận Phú Nhuận">Quận Phú Nhuận</option>
+                                    <option value="Quận Tân Bình">Quận Tân Bình</option>
+                                    <option value="Quận Tân Phú">Quận Tân Phú</option>
+                                    <option value="Huyện Bình Chánh">Huyện Bình Chánh</option>
+                                    <option value="Huyện Nhà Bè">Huyện Nhà Bè</option>
+                                    <option value="Huyện Hóc Môn">Huyện Hóc Môn</option>
+                                    <option value="Huyện Củ Chi">Huyện Củ Chi</option>
+                                    <option value="Huyện Cần Giờ">Huyện Cần Giờ</option>
+                                </select>
+                            </div>
+                            <div class="item-form col-12">
+                                <label for="input-buy-home">Ngày hẹn:</label>
+                                <input required type="text" id="input-buy-home" placeholder="Chọn ngày tháng"></input>
+                            </div>
+                            <div class="item-form col-12">
+                                <button id="btnSubmit">Gửi</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
             <!-- DETAIL ROOM END -->
+
+            
+        </div>
+        <div id="map-contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4789614441825!2d106.68484597599812!3d10.7745808893741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f24b71f5e6d%3A0x72119375af73ce6e!2zMTc3IMSQLiBDw6FjaCBN4bqhbmcgVGjDoW5nIDgsIFBoxrDhu51uZyA1LCBRdeG6rW4gMywgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1713869218542!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <!-- MAIN END -->
 
@@ -281,16 +331,16 @@
                     </div>
                     <div class="content">
                         <p>
-                            <a href="@">Giới thiệu</a>
+                            <a href="./index.html">Trang chủ</a>
                         </p>
                         <p>
-                            <a href="@">Tin tức</a>
+                            <a href="./news.html">Tin tức</a>
                         </p>
                         <p>
-                            <a href="@">Giỏ hàng</a>
+                            <a href="./phong-tro.html">Giỏ hàng</a>
                         </p>
                         <p>
-                            <a href="@">Liên hệ</a>
+                            <a href="./contact.html">Liên hệ</a>
                         </p>
                     </div>
                 </div>
@@ -333,6 +383,7 @@
     <script src="./publics/js/index.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="./publics/js/fancybox.min.js"></script>
+    <script src="./publics/js/toastr.min.js"></script>
     <script src="./publics/js/sendEmail.js"></script>
 
 </body>
